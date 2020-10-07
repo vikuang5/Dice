@@ -7,7 +7,6 @@ void setup()
 }
 void draw()
 {
-  clear();
   background(200);
   int i = 1;
   while(i<4){
