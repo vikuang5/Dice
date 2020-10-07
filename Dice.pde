@@ -14,7 +14,7 @@ void draw()
   Die bob = new Die(110 * i,40);
   bob.show();
   Die sue = new Die(110 * i,160);
-   sue.show();
+  sue.show();
   Die joe = new Die(110 * i,280);
   joe.show();
   i++;
