@@ -1,5 +1,4 @@
-float sum = 0;
-float average = 0; 
+int sum = 0;
 int rollValue = 0;
 void setup()
 {
@@ -21,11 +20,8 @@ void draw()
   i++;
   }
   text("Sum: " + sum, 250, 400);
-  average = sum/9; 
-  text("Average: " + average, 240, 430);
   text("Did you know that the modern dice originated in China in 600 b.c.?!", 70, 460);
   sum = 0;
-  average = 0;
 }
 
 void mousePressed()
