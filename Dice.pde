@@ -1,4 +1,5 @@
-int sum = 0;
+float sum = 0;
+float average = 0; 
 int rollValue = 0;
 void setup()
 {
@@ -14,14 +15,17 @@ void draw()
   Die bob = new Die(110 * i,40);
   bob.show();
   Die sue = new Die(110 * i,160);
-  sue.show();
+   sue.show();
   Die joe = new Die(110 * i,280);
   joe.show();
   i++;
   }
   text("Sum: " + sum, 250, 400);
+  average = sum/9; 
+  text("Average: " + average, 240, 430);
   text("Did you know that the modern dice originated in China in 600 b.c.?!", 70, 460);
   sum = 0;
+  average = 0;
 }
 
 void mousePressed()
@@ -46,35 +50,35 @@ class Die
   {
     noStroke();
     fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
-    rect(myX,myY,90,90);
+    rect(myX,myY,100,100);
     fill(0);
    if (rollValue == 1){
-      ellipse(myX+45, myY+45, 20, 20);
+      ellipse(myX+50, myY+50, 20, 20);
     }else if(rollValue == 2){
-      ellipse(myX+22.5, myY+22.5, 20, 20);
-      ellipse(myX+67.5, myY+67.5, 20, 20);
+      ellipse(myX+25, myY+25, 20, 20);
+      ellipse(myX+75, myY+75, 20, 20);
     }else if(rollValue == 3){
-      ellipse(myX+22.5, myY+22.5, 20, 20);
-      ellipse(myX+45, myY+45, 20, 20);
-      ellipse(myX+67.5, myY+67.5, 20, 20);
+      ellipse(myX+25, myY+25, 20, 20);
+      ellipse(myX+50, myY+50, 20, 20);
+      ellipse(myX+75, myY+75, 20, 20);
     }else if(rollValue == 4){
-      ellipse(myX+22.5, myY+22.5, 20, 20);
-      ellipse(myX+67.5, myY+22.5, 20, 20);
-      ellipse(myX+22.5, myY+67.5, 20, 20);
-      ellipse(myX+67.5, myY+67.5, 20, 20);
+      ellipse(myX+25, myY+25, 20, 20);
+      ellipse(myX+75, myY+25, 20, 20);
+      ellipse(myX+25, myY+75, 20, 20);
+      ellipse(myX+75, myY+75, 20, 20);
     }else if(rollValue == 5){
-      ellipse(myX+22.5, myY+22.5, 20, 20);
-      ellipse(myX+67.5, myY+22.5, 20, 20);
-      ellipse(myX+45, myY+45, 20, 20);
-      ellipse(myX+22.5, myY+67.5, 20, 20);
-      ellipse(myX+67.5, myY+67.5, 20, 20);
+      ellipse(myX+25, myY+25, 20, 20);
+      ellipse(myX+75, myY+25, 20, 20);
+      ellipse(myX+50, myY+50, 20, 20);
+      ellipse(myX+25, myY+75, 20, 20);
+      ellipse(myX+75, myY+75, 20, 20);
     } else if (rollValue == 6){
-      ellipse(myX+22.5, myY+22.5, 20, 20);
-      ellipse(myX+45, myY+22.5, 20, 20);
-      ellipse(myX+67.5, myY+22.5, 20, 20);
-      ellipse(myX+22.5, myY+67.5, 20, 20);
-      ellipse(myX+45, myY+67.5, 20, 20);
-      ellipse(myX+67.5, myY+67.5, 20, 20);
+      ellipse(myX+25, myY+25, 20, 20);
+      ellipse(myX+50, myY+25, 20, 20);
+      ellipse(myX+75, myY+25, 20, 20);
+      ellipse(myX+25, myY+75, 20, 20);
+      ellipse(myX+50, myY+75, 20, 20);
+      ellipse(myX+75, myY+75, 20, 20);
     }
   }
 }
